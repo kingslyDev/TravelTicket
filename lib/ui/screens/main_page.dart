@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:travelticket/widgets/customButtonNavigation.dart';
 import '../../shared/themes.dart';
 
 class MainPage extends StatelessWidget {
@@ -23,29 +24,20 @@ class MainPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(18),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(),
-                Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/ic_home.png'),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 30,
-                  height: 2,
-                  decoration: BoxDecoration(
-                    color: kPrimaryColor,
-                    borderRadius: BorderRadius.circular(18),
-                  ),
-                ),
-              ],
+            CustomButtonNavigationItem(
+              imageUrl: 'assets/ic_home.png',
+              isSelected: true,
+            ),
+            CustomButtonNavigationItem(
+              imageUrl: 'assets/ic_transaksi.png',
+            ),
+            CustomButtonNavigationItem(
+              imageUrl: 'assets/ic_saldo.png',
+            ),
+            CustomButtonNavigationItem(
+              imageUrl: 'assets/ic_settings.png',
             ),
           ],
         ),

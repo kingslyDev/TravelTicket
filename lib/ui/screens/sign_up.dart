@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travelticket/widgets/custom_button.dart';
 import '../../shared/themes.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -168,28 +169,11 @@ class SignUpPage extends StatelessWidget {
       }
 
       Widget sumbitButton() {
-        return Container(
-          width: double.infinity,
-          height: 55,
-          child: TextButton(
+        return CustomButton(
+            kata: 'Submit',
             onPressed: () {
               Navigator.pushNamed(context, '/bonus-page');
-            },
-            style: TextButton.styleFrom(
-              backgroundColor: kPrimaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-            ),
-            child: Text(
-              'Submit',
-              style: whiteTextStyle.copyWith(
-                fontSize: 18,
-                fontWeight: medium,
-              ),
-            ),
-          ),
-        );
+            });
       }
 
       return Container(
