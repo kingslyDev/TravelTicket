@@ -1,11 +1,16 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:travelticket/ui/screens/home_page.dart';
 import 'package:travelticket/widgets/customButtonNavigation.dart';
 import '../../shared/themes.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
+
+  Widget buildContent() {
+    return const HomePage();
+  }
 
   @override
   Widget customButtonNavigaton() {
@@ -50,7 +55,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: Stack(
         children: [
-          Text('Main Page'),
+          buildContent(),
           customButtonNavigaton(),
         ],
       ),

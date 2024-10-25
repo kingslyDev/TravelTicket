@@ -22,9 +22,7 @@ class CustomButton extends StatelessWidget {
       height: 55,
       margin: margin,
       child: TextButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/SignUp');
-        },
+        onPressed: onPressed,
         style: TextButton.styleFrom(
           backgroundColor: kPrimaryColor,
           shape: RoundedRectangleBorder(

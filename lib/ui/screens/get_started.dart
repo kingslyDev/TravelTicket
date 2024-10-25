@@ -48,7 +48,7 @@ class GetStartedPage extends StatelessWidget {
                   kata: 'Get Started',
                   ukuran: 220,
                   onPressed: () {
-                    Navigator.pushNamed(context, '/SignUp');
+                    Navigator.pushNamed(context, '/bonus-page');
                   },
                   margin: EdgeInsets.only(top: 50, bottom: 80),
                 ),

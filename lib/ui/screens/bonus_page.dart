@@ -134,7 +134,7 @@ class BonusPage extends StatelessWidget {
         kata: 'Start Fly Now',
         ukuran: 220,
         onPressed: () {
-          Navigator.pushNamed(context, 'Main-page');
+          Navigator.pushNamed(context, '/Main-page');
         },
       );
     }
