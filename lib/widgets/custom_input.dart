@@ -4,11 +4,13 @@ import '../shared/themes.dart';
 class CustomInput extends StatelessWidget {
   final String judul;
   final String hint;
+  final bool obscureText;
 
   const CustomInput({
     Key? key,
     required this.judul,
     required this.hint,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -26,6 +28,7 @@ class CustomInput extends StatelessWidget {
           ),
           TextFormField(
             cursorColor: kBlackColor,
+            obscureText: obscureText,
             decoration: InputDecoration(
               hintText: hint,
               border: OutlineInputBorder(

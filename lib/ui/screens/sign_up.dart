@@ -42,6 +42,7 @@ class SignUpPage extends StatelessWidget {
         return CustomInput(
           judul: 'Password',
           hint: 'Your Password',
+          obscureText: true,
         );
       }
 
