@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travelticket/shared/themes.dart';
 import 'package:travelticket/widgets/custom_card_destination.dart';
+import 'package:travelticket/widgets/destination_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -91,10 +92,58 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget newDestination() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 30,
+          right: defaultMargin,
+          left: defaultMargin,
+          bottom: 100,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'New this Years',
+              style: blackTextStyle.copyWith(
+                fontSize: 18,
+                fontWeight: semiBold,
+              ),
+            ),
+            DestinationTile(
+              title: 'Danau Beratan',
+              location: 'Singaraja',
+              img: 'assets/img_destination6.png',
+              rating: 4.4,
+            ),
+            DestinationTile(
+              title: 'Sydney Opera',
+              location: 'Australia',
+              img: 'assets/img_destination7.png',
+              rating: 4.7,
+            ),
+            DestinationTile(
+              title: 'Roma',
+              location: 'Italy',
+              img: 'assets/img_destination8.png',
+              rating: 5.0,
+            ),
+            DestinationTile(
+              title: 'Hill Hey',
+              location: 'Monaco',
+              img: 'assets/img_destination10.png',
+              rating: 4.8,
+            ),
+          ],
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
         popularDestinations(),
+        newDestination(),
       ],
     );
   }
