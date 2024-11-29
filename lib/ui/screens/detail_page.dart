@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:travelticket/shared/themes.dart";
+import "package:travelticket/widgets/custom_button.dart";
 import "package:travelticket/widgets/interest_item.dart";
 import "package:travelticket/widgets/photo_item.dart";
 
@@ -206,12 +207,40 @@ class DetailPage extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(
-                top: 30,
+              margin: EdgeInsets.symmetric(
+                vertical: 30,
               ),
               child: Row(
                 children: [
-                  Column()
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'IDR 2.500.000',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: medium,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Per Orang',
+                          style: blackTextStyle.copyWith(
+                            fontWeight: light,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // button
+                  CustomButton(
+                    kata: 'Book Now',
+                    onPressed: () {},
+                    ukuran: 170,
+                  )
                 ],
               ),
             ),
