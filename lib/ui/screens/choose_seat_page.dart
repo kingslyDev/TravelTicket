@@ -114,42 +114,52 @@ class ChooseSeatPage extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Text(
-                    'A',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      'A',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Text(
-                    'A',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      'B',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Text(
-                    'A',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      '',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Text(
-                    'A',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      'C',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: Text(
-                    'A',
-                    style: greyTextStyle.copyWith(
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      'D',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
