@@ -131,6 +131,9 @@ class BonusPage extends StatelessWidget {
 
     Widget startButton() {
       return CustomButton(
+        margin: EdgeInsets.only(
+          top: 60,
+        ),
         kata: 'Start Fly Now',
         ukuran: 220,
         onPressed: () {
