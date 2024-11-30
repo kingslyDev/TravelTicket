@@ -71,6 +71,7 @@ class SeatItem extends StatelessWidget {
         ),
         border: Border.all(
           color: BorderColor(),
+          width: 2,
         ),
       ),
       child: child(),

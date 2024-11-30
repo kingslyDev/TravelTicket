@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelticket/shared/themes.dart';
+import 'package:travelticket/widgets/custom_button.dart';
 import 'package:travelticket/widgets/seat_item.dart';
 
 class ChooseSeatPage extends StatelessWidget {
@@ -338,7 +339,7 @@ class ChooseSeatPage extends StatelessWidget {
                     height: 48,
                     child: Center(
                       child: Text(
-                        '4',
+                        '5',
                         style: greyTextStyle.copyWith(
                           fontSize: 16,
                         ),
@@ -354,8 +355,65 @@ class ChooseSeatPage extends StatelessWidget {
                 ],
               ),
             ),
+            // Your Seat
+            Container(
+              margin: EdgeInsets.only(
+                top: 35,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Your Seat',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: light,
+                    ),
+                  ),
+                  Text(
+                    'A3,B3',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: medium,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            //Harga Total
+            Container(
+              margin: EdgeInsets.only(
+                top: 16,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: light,
+                    ),
+                  ),
+                  Text(
+                    'IDR 540.000.000',
+                    style: purpleTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
+      );
+    }
+
+    Widget checkoutButton() {
+      return CustomButton(
+        kata: 'Continue To Checkout',
+        onPressed: () {},
       );
     }
 
@@ -369,6 +427,7 @@ class ChooseSeatPage extends StatelessWidget {
           title(),
           seatStatus(),
           selectSeat(),
+          checkoutButton(),
         ],
       ),
     );
