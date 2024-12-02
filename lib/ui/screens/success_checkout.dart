@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelticket/shared/themes.dart';
+import 'package:travelticket/ui/screens/main_page.dart';
 import 'package:travelticket/widgets/custom_button.dart';
 
 class SuccessCheckout extends StatelessWidget {
@@ -50,12 +51,13 @@ class SuccessCheckout extends StatelessWidget {
     );
   }
 
-  Widget bookingButton() {
+  Widget bookingButton(BuildContext context) {
     return CustomButton(
       kata: 'My Bookings',
       ukuran: 220,
       onPressed: () {
-        Navigator.pushNamedAndRemoveUntil(context, /Main-page, (route) => false);
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/Main-page', (route) => false);
       },
       margin: EdgeInsets.only(
         top: 50,
@@ -71,7 +73,7 @@ class SuccessCheckout extends StatelessWidget {
         children: [
           banner(),
           succesfull(),
-          bookingButton(),
+          bookingButton(context),
         ],
       ),
     );
