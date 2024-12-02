@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:travelticket/cubit/page_cubit.dart';
 import 'package:travelticket/ui/screens/bonus_page.dart';
 import 'package:travelticket/ui/screens/get_started.dart';
 import 'package:travelticket/ui/screens/main_page.dart';
@@ -12,15 +14,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => SplashPage(),
-        '/get-started': (context) => GetStartedPage(),
-        '/SignUp': (context) => SignUpPage(),
-        '/bonus-page': (context) => BonusPage(),
-        '/Main-page': (context) => MainPage(),
-      },
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => PageCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/': (context) => SplashPage(),
+          '/get-started': (context) => GetStartedPage(),
+          '/SignUp': (context) => SignUpPage(),
+          '/bonus-page': (context) => BonusPage(),
+          '/Main-page': (context) => MainPage(),
+        },
+      ),
     );
   }
 }
