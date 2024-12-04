@@ -4,7 +4,12 @@ import 'package:travelticket/widgets/custom_input.dart';
 import '../../shared/themes.dart';
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+  SignUpPage({Key? key}) : super(key: key);
+
+  TextEditingController nameController = TextEditingController(text: '');
+  TextEditingController emailController = TextEditingController(text: '');
+  TextEditingController passwordController = TextEditingController(text: '');
+  TextEditingController hobbyController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +33,7 @@ class SignUpPage extends StatelessWidget {
         return CustomInput(
           judul: 'Fullname',
           hint: 'Your Fullname',
+          controller: nameController,
         );
       }
 
@@ -35,6 +41,7 @@ class SignUpPage extends StatelessWidget {
         return CustomInput(
           judul: 'Email',
           hint: 'Your Email',
+          controller: emailController,
         );
       }
 
@@ -43,6 +50,7 @@ class SignUpPage extends StatelessWidget {
           judul: 'Password',
           hint: 'Your Password',
           obscureText: true,
+          controller: passwordController,
         );
       }
 
@@ -50,6 +58,7 @@ class SignUpPage extends StatelessWidget {
         return CustomInput(
           judul: 'Hobbies',
           hint: 'Your Hobby',
+          controller: hobbyController,
         );
       }
 

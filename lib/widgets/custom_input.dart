@@ -5,12 +5,14 @@ class CustomInput extends StatelessWidget {
   final String judul;
   final String hint;
   final bool obscureText;
+  final TextEditingController controller;
 
   const CustomInput({
     Key? key,
     required this.judul,
     required this.hint,
     this.obscureText = false,
+    required this.controller,
   }) : super(key: key);
 
   @override
