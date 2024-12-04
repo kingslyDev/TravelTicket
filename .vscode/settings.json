@@ -1,3 +1,4 @@
 {
-  "cmake.sourceDirectory": "D:/Projek/TravelTicket/windows/flutter"
+  "cmake.sourceDirectory": "D:/Projek/TravelTicket/windows/flutter",
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

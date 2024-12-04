@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "319956474613",
+    "project_id": "tiketpesawat-fe592",
+    "storage_bucket": "tiketpesawat-fe592.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319956474613:android:d509ecd122d4c77c9ac3bc",
+        "android_client_info": {
+          "package_name": "com.kingslydev.travelticket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8BmqGj2hXfkjcrsNbrzMqyTPaG1XNXA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
